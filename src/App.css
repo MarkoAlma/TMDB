@@ -401,16 +401,24 @@ gap: 20px;
   transition-delay: 0s;
 }
 .dobozka:hover img{
-    transform: scale(1.05);
-    transition:  0.5s ease;
+    transform: scale(1.08);
+    transition: transform 0.5s ease;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
 }
 
-img {
-    transition: transform 0.5s ease;
+.dobozka:hover{
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
+}
+
+.dobozka img {
+    transition: transform 1.5s ease;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+        overflow: hidden; /* <--- ez is segíthet */
+            display: block;
+            
 }
 .dobozka {
       border-radius: 20px !important;
@@ -419,5 +427,5 @@ img {
     min-height: 420px;
     max-height: fit-content !important;
   position: relative; /* kell ahhoz, hogy az absolute gyereke ehhez viszonyítson */
-  overflow: visible;  /* vagy hidden, attól függően, hogy akarod-e a kidobott részt látni */
+  overflow: hidden;  /* vagy hidden, attól függően, hogy akarod-e a kidobott részt látni */
 }
